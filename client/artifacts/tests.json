@@ -1,0 +1,68 @@
+{
+  "contracts": {
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/Counters": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/ERC721": "08ad48d06daf24aa42cf0b30597603c2068f8383",
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/Strings": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "SimpleMint": "db6aed25152c02d158aee8ff8a99e4d4310fb17d"
+  },
+  "tests": {
+    "tests/test_simple_mint.py": {
+      "coverage": false,
+      "isolated": [
+        "OpenZeppelin/openzeppelin-contracts@4.5.0/Counters",
+        "OpenZeppelin/openzeppelin-contracts@4.5.0/ERC721",
+        "SimpleMint"
+      ],
+      "results": ".....",
+      "sha1": "2af5960f4e60199ddd6f3d6566304f08fd770dad",
+      "txhash": [
+        "30dbfc52e8aaaf03387aa75c417eec38ceae9362",
+        "7c144007a69c8b422a4d6493abf2cf9bf97cd57a"
+      ]
+    }
+  },
+  "tx": {
+    "30dbfc52e8aaaf03387aa75c417eec38ceae9362": {
+      "SimpleMint": {
+        "0": [
+          [],
+          [],
+          []
+        ],
+        "1": [
+          [],
+          [],
+          []
+        ],
+        "12": [
+          [],
+          [],
+          []
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "7c144007a69c8b422a4d6493abf2cf9bf97cd57a": {
+      "SimpleMint": {
+        "1": [
+          [],
+          [],
+          []
+        ],
+        "12": [
+          [
+            24
+          ],
+          [
+            82
+          ],
+          []
+        ]
+      }
+    }
+  }
+}

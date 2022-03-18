@@ -1,21 +1,30 @@
 # change the build directory to be within react's scope
 project_structure:
-    build: client/src/artifacts
+    build: client/artifacts
 
-      
+
+dependencies:
+    - OpenZeppelin/openzeppelin-contracts@4.5.0
+
+
 # automatically fetch contract sources from Etherscan
 autofetch_sources: True
 dotenv: .env
 
 
+compiler:
+    solc:
+        version: '0.8.4'
+        optimizer:
+            enabled: true
+            runs: 200
+        remappings:
+            - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0"
+
+
 networks:
   default: development
   development:
-    cmd_settings:
-      mnemonic: brownie
-      default_balance: 100000000000000000000
-      unlock: <ACCOUNT ADDRESS HERE> # optionally add saved brownie account to Ganache
-      # (requires explicit transfer of eth to accounts[-1]) 
 
     update_interval: 60
     verify: False
