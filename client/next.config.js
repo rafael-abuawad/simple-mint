@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      'ipfs.io'
+      'ipfs.io',
+      'ipfs.infura.io'
     ]
   }
 }
