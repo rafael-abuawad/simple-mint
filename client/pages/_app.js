@@ -8,7 +8,7 @@ import NoWallet from '../components/NoWallet'
 
 // store and context
 import { getInitialTheme, rawSetTheme } from '../store/themeContext'
-import Web3Context, { getNetworkName } from '../store/web3Context'
+import Web3Context from '../store/web3Context'
 
 // styles
 import '../styles/globals.css'
@@ -36,12 +36,10 @@ function App({ Component, pageProps }) {
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
     const address = await signer.getAddress()
-    const { chainId } = await provider.getNetwork()
-    const chainName = getNetworkName(chainId)
 
     // this deployed simple mint smartcontract address
     /// *** REPLACE THIS ***
-    const simpleMintAddress = '0x854b699d119c5f89681c96d282098e4420eDa135'
+    const simpleMintAddress = '0x2DEb2eA84A2969Cd5f9D57Ba812F0AaB607af2C0'
 
     const simpleMintContract = new ethers.Contract(
       simpleMintAddress,

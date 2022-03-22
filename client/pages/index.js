@@ -22,25 +22,29 @@ export default function Home() {
   }, [simpleMint, address])
 
   async function loadNfts() {
-    let nfts = await simpleMint.tokensOf(address)
+    try {
+      let nfts = await simpleMint.tokensOf(address)
 
-    // tokensOf returns a Token ID and a Token URI
-    // we need to retrive and parse that data
-    nfts = await Promise.all(
-      nfts.map(async (nft) => {
-        // token as returned from the smart-contract
-        let [metadata, tokenId] = nft
+      // tokensOf returns a Token ID and a Token URI
+      // we need to retrive and parse that data
+      nfts = await Promise.all(
+        nfts.map(async (nft) => {
+          // token as returned from the smart-contract
+          let [metadata, tokenId] = nft
 
-        // parsing the token id
-        tokenId = tokenId.toString()
-        // fetching the metadata
-        metadata = await axios.get(metadata).then((res) => res.data)
+          // parsing the token id
+          tokenId = tokenId.toString()
+          // fetching the metadata
+          metadata = await axios.get(metadata).then((res) => res.data)
 
-        return { metadata, tokenId }
-      })
-    )
+          return { metadata, tokenId }
+        })
+      )
 
-    setNfts(nfts)
+      setNfts(nfts)
+    } catch(err) {
+      window.alert(err)
+    }
   }
 
   return (

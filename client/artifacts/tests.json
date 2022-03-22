@@ -16,13 +16,13 @@
       "results": ".....",
       "sha1": "2af5960f4e60199ddd6f3d6566304f08fd770dad",
       "txhash": [
-        "30dbfc52e8aaaf03387aa75c417eec38ceae9362",
-        "7c144007a69c8b422a4d6493abf2cf9bf97cd57a"
+        "06fc061fd8260d41255eae26610d63c69549ab38",
+        "a3be119932465993f4a40e0ad61dd2074308bb43"
       ]
     }
   },
   "tx": {
-    "30dbfc52e8aaaf03387aa75c417eec38ceae9362": {
+    "06fc061fd8260d41255eae26610d63c69549ab38": {
       "SimpleMint": {
         "0": [
           [],
@@ -46,7 +46,7 @@
         ]
       }
     },
-    "7c144007a69c8b422a4d6493abf2cf9bf97cd57a": {
+    "a3be119932465993f4a40e0ad61dd2074308bb43": {
       "SimpleMint": {
         "1": [
           [],
