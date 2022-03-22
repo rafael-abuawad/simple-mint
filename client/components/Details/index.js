@@ -1,7 +1,7 @@
 // components/Details/index.js
 export default function Details({ summary, isGrid, children }) {
   return (
-    <details className="group border border-zinc-100 p-3 hover:cursor-pointer">
+    <details className="group border border-zinc-100 p-3 hover:cursor-pointer dark:border-zinc-600">
       <summary className="font-xl flex w-full list-none items-center justify-between font-bold">
         {/* The title of the drop down */}
         <span className="group-hover:underline">{summary}</span>
@@ -9,7 +9,7 @@ export default function Details({ summary, isGrid, children }) {
         <div className="icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

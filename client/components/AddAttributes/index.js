@@ -49,7 +49,6 @@ export default function AddAttributes({ addAttribute }) {
     }
 
     addAttribute(data)
-    console.log(data)
 
     // reset all fields
     setDisplayType('')
@@ -67,7 +66,7 @@ export default function AddAttributes({ addAttribute }) {
           Name
         </label>
         <input
-          className="placeholder-text-xl h-12 rounded-md border-2 border-zinc-100 bg-zinc-100 px-2 py-1 outline-none focus:border-green-400"
+          className="placeholder-text-xl h-12 rounded-md border-2 border-zinc-100 bg-zinc-100 px-2 py-1 outline-none focus:border-green-400 dark:border-zinc-500 dark:bg-zinc-500"
           id="name"
           type="text"
           value={displayType}
@@ -83,7 +82,7 @@ export default function AddAttributes({ addAttribute }) {
           Trait Type
         </label>
         <select
-          className="placeholder-text-xl h-12 rounded-md border-2 border-zinc-100 bg-zinc-100 px-2 py-1 outline-none focus:border-green-400"
+          className="placeholder-text-xl h-12 rounded-md border-2 border-zinc-100 bg-zinc-100 px-2 py-1 outline-none focus:border-green-400 dark:border-zinc-500 dark:bg-zinc-500"
           name="traitType"
           value={traitType}
           onChange={(e) => setTraitType(e.target.value)}
@@ -103,7 +102,7 @@ export default function AddAttributes({ addAttribute }) {
         </label>
         <input
           id="value"
-          className="placeholder-text-xl h-12 rounded-md border-2 border-zinc-100 bg-zinc-100 px-2 py-1 outline-none focus:border-green-400"
+          className="placeholder-text-xl h-12 rounded-md border-2 border-zinc-100 bg-zinc-100 px-2 py-1 outline-none focus:border-green-400 dark:border-zinc-500 dark:bg-zinc-500"
           type="text"
           value={value}
           placeholder="Ex. 25"
